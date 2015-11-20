@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="image" tilewidth="32" tileheight="32" tilecount="256">
+  <image source="image.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlWEKwCAIhb1hu8G8/ym2P4MIdJq+NTZ/PB6EJZ+WNSLaTrWg753YuY8TnZ3xUe7erzO9dYtyj7WX1tD8s/dG4onWxeJ3/dSE4h/rIGklv/b+LfGZ/Fah+C25v8pvzY2Yf155+S3z/q/83twr+bVzsvqPmP9P+Bv//+Iv/uIv/uLH+wFL92M5
+  </data>
+ </layer>
+ <layer name="Tile Layer 17" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAMAiDv9+peYbpAQpP0MQAAALB38mERQQ==
+  </data>
+ </layer>
+ <layer name="Tile Layer 16" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAIA6De79V+UQchIfltjgMAAEDDArFiEUE=
+  </data>
+ </layer>
+ <layer name="Tile Layer 15" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAIA6De79V+UQchIeGzOQ4AAEDHAnBjEUE=
+  </data>
+ </layer>
+ <layer name="Tile Layer 14" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAIA6De79V+UQchIYG/5jgAAEDLAi9kEUE=
+  </data>
+ </layer>
+ <layer name="Tile Layer 13" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAIA6De79V+UQchIQG+muMAAEDPAu5WEUE=
+  </data>
+ </layer>
+ <layer name="Tile Layer 12" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAIA6De79V+UQchIQH4aY4DAEDTAq1XEUE=
+  </data>
+ </layer>
+ <layer name="Tile Layer 11" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAIA6De79V+UQchIQHgozkOAEDXAmxYEUE=
+  </data>
+ </layer>
+ <layer name="Tile Layer 10" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAIA6De79V+UQchIQGAf+Y4AEDbAitZEUE=
+  </data>
+ </layer>
+ <layer name="Tile Layer 9" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztzTkSggAUBFEWIQeV3AVyEMxdMAeUXEEP46ntC5DJj6arXjZV4zhKKaX+lQsPPhYIEBr+R4ixxAprJIb/G2yxwx4pMsP/HAUOKFHhaPh/whkXXFHjZvjfoEWHOx7oJ7bfGTzxwoARb3wmtkoppZSy7wclfxZ4
+  </data>
+ </layer>
+ <layer name="Tile Layer 8" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztzbkOgmAUROFfFHpR7BG1d6NXlh633o2H4ak9NaGEazMn+bpJxjmllFLKuRE8jDGBj8Dwf4oQM8wRYWH4H2OJBCussTH832KHPQ44IjX8P+GMDDkKlIb/FS644oY7HgP+NS1PvPDGB1/UHbu+KKWUUv/oBw/gFng=
+  </data>
+ </layer>
+ <layer name="Tile Layer 7" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAMA6Dqn+rJ6FFISAAAWHLlAHQ8aE0RQQ==
+  </data>
+ </layer>
+ <layer name="Tile Layer 6" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAMA6Dqn+rJ6FFISAAAYMeVA7Q8J04RQQ==
+  </data>
+ </layer>
+ <layer name="Tile Layer 8" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAMA6Dqn+rJ6FFISAAAgBVXDvQ85kARQQ==
+  </data>
+ </layer>
+ <layer name="Tile Layer 6" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAMA6Dqn+rJ6FFISAAAADZcOTQ9pUERQQ==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztyzsOABAAREGu77A4gV+voaGYSbbZ5IUAAADAr8pcvejy5ksX6yuM513bfLw1ADD6FG4=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztycENABAQRFH1K40O6IAOuNiLRFxWYsPlv2Qu850DAAAAALwWZNG4nfQpybJxO+lTkVXjpnW/rMn69t02rf82AMldKUE=
+  </data>
+ </layer>
+</map>

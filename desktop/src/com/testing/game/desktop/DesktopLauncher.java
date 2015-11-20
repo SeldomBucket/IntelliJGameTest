@@ -8,8 +8,9 @@ public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		config.title = "Bucket, innit";
-		config.width = 1920;
-		config.height = 1080;
+		config.width = 512+256;
+		config.height = 512;
+        config.resizable = false;
 		new LwjglApplication(new IntelliJGame(), config);
 	}
 }
