@@ -12,7 +12,6 @@ import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 
 public class IntelliJGame extends ApplicationAdapter implements ApplicationListener, InputProcessor {
 	SpriteBatch batch;
-	private Texture dropImage, bucketImage;
 	private OrthographicCamera camera;
 	private OnscreenPlayer bucket;
 	private BitmapFont xVal, yVal, fps;
@@ -24,8 +23,6 @@ public class IntelliJGame extends ApplicationAdapter implements ApplicationListe
         float w = Gdx.graphics.getWidth();
         float h = Gdx.graphics.getHeight();
 		batch = new SpriteBatch();
-		dropImage = new Texture("droplet.png");
-		bucketImage = new Texture("bucket.png");
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, w, h);
 		bucket = new OnscreenPlayer();
@@ -35,7 +32,7 @@ public class IntelliJGame extends ApplicationAdapter implements ApplicationListe
 		yVal.setColor(Color.GREEN);
 		fps = new BitmapFont();
 		fps.setColor(Color.WHITE);
-        tiledmap = new TmxMapLoader().load("crapmap.tmx");
+        tiledmap = new TmxMapLoader().load("H:\\IntelliJGameTest\\core\\assets\\crapmap.tmx");
         tiledMapRenderer = new  OrthogonalTiledMapRendererWithSprites(tiledmap);
         tiledMapRenderer.addSprite(bucket);
         Gdx.input.setInputProcessor(this);

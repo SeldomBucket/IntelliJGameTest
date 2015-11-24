@@ -27,7 +27,7 @@ public class OrthogonalTiledMapRendererWithSprites extends OrthogonalTiledMapRen
 
     @Override
     public void render() {
-        Map<Integer,DrawableOnscreenObject> objectsToDraw = new HashMap<>();
+        Map<Integer,DrawableOnscreenObject> objectsToDraw = new HashMap();
         for(DrawableOnscreenObject thing : buckets){
             objectsToDraw.put(thing.getTileLayer(),thing);
         }

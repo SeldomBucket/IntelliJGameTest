@@ -17,7 +17,7 @@ public class OnscreenPlayer extends DrawableOnscreenObject{
         Sprite tempSprite;
         tempSprite = getSprite();
         tempSprite.setBounds(800 / 2 - 64 / 2,20,64,64);
-        tempSprite.setRegion(new Texture("bucket.png"));
+        tempSprite.setRegion(new Texture(Gdx.files.internal("H:\\IntelliJGameTest\\core\\assets\\bucket.png")));
         setSprite(tempSprite);
     }
     public float getXVelocity(){
