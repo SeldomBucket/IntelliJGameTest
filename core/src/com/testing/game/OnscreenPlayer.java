@@ -4,24 +4,21 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import org.omg.CORBA.PUBLIC_MEMBER;
 
-public class Bucket {
+public class OnscreenPlayer extends DrawableOnscreenObject{
     private float xVelocity, yVelocity;
-    private Sprite box;
     private float maxVelocity = 500, accel = 3000, decel = 2000;
     float w = 1024;
     float h = 1024;
-    int tileLayer = 0;
-
-    public Bucket(){
+    public OnscreenPlayer(){
         xVelocity = 0;
         yVelocity = 0;
-        box = new Sprite();
-        box.setBounds(800 / 2 - 64 / 2,20,64,64);
-        box.setRegion(new Texture("bucket.png"));
-    }
-    public Sprite getBox(){
-        return box;
+        Sprite tempSprite;
+        tempSprite = getSprite();
+        tempSprite.setBounds(800 / 2 - 64 / 2,20,64,64);
+        tempSprite.setRegion(new Texture("bucket.png"));
+        setSprite(tempSprite);
     }
     public float getXVelocity(){
         return xVelocity;
@@ -50,56 +47,45 @@ public class Bucket {
         if (yVelocity < -maxVelocity) yVelocity = -maxVelocity;
     }
     public float getX(){
-        return box.getX();
+        return getSprite().getX();
     }
     public float getY(){
-        return box.getY();
+        return getSprite().getY();
     }
     public void setX(float setVal){
-        box.setX(setVal);
+        getSprite().setX(setVal);
     }
     public void setY(float setVal){
-        box.setY(setVal);
+        getSprite().setY(setVal);
+    }
+    public void Left() {
+        if (Gdx.input.isKeyPressed(Input.Keys.D) && Gdx.input.isKeyPressed(Input.Keys.A)) {
+            decelXToStop();
+        } else {
+            changeXVelocity(accel*Gdx.graphics.getDeltaTime());
+            checkEdgeCollision();
+        }
+    }
+    public void Right(){
+        changeXVelocity((-accel)*Gdx.graphics.getDeltaTime());
+        checkEdgeCollision();
+    }
+    public void Up() {
+        if (Gdx.input.isKeyPressed(Input.Keys.W) && Gdx.input.isKeyPressed(Input.Keys.S)) {
+            decelYToStop();
+        } else {
+            changeYVelocity(accel * Gdx.graphics.getDeltaTime());
+            checkEdgeCollision();
+        }
+    }
+    public void Down() {
+        changeYVelocity((-accel) * Gdx.graphics.getDeltaTime());
+        checkEdgeCollision();
     }
     public void movement(){
-        if(Gdx.input.isKeyPressed(Input.Keys.D) && Gdx.input.isKeyPressed(Input.Keys.A)){
-            decelXToStop();
-        }else{
-            if(Gdx.input.isKeyPressed(Input.Keys.D)) {
-                changeXVelocity(accel*Gdx.graphics.getDeltaTime());
-                checkEdgeCollision();
-            }
-            if(Gdx.input.isKeyPressed(Input.Keys.A)) {
-                changeXVelocity((-accel)*Gdx.graphics.getDeltaTime());
-                checkEdgeCollision();
-            }
-            if(!Gdx.input.isKeyPressed(Input.Keys.D) && !Gdx.input.isKeyPressed(Input.Keys.A)){
-                decelXToStop();
-            }
-        }
-        if(Gdx.input.isKeyPressed(Input.Keys.W) && Gdx.input.isKeyPressed(Input.Keys.S)){
-            decelYToStop();
-        }else{
-            if(Gdx.input.isKeyPressed(Input.Keys.W)) {
-                changeYVelocity(accel*Gdx.graphics.getDeltaTime());
-                checkEdgeCollision();
-            }
-            if(Gdx.input.isKeyPressed(Input.Keys.S)) {
-                changeYVelocity((-accel)*Gdx.graphics.getDeltaTime());
-                checkEdgeCollision();
-            }
-            if(!Gdx.input.isKeyPressed(Input.Keys.W) && !Gdx.input.isKeyPressed(Input.Keys.S)){
-                decelYToStop();
-            }
-        }
-        if(Gdx.input.isKeyPressed(Input.Keys.SPACE)) {
-            setXVelocity(0);
-            setYVelocity(0);
-        }
-        checkEdgeCollision();
-        setX(getX() + getXVelocity()*Gdx.graphics.getDeltaTime());
-        setY(getY() + getYVelocity()*Gdx.graphics.getDeltaTime());
-        tileLayer = (int)(17-((getY()-40)/64));
+        setX(getX() + xVelocity*Gdx.graphics.getDeltaTime());
+        setY(getY() + yVelocity*Gdx.graphics.getDeltaTime());
+        setTileLayer((int)(17-((getY()-40)/64)));
     }
     private void checkEdgeCollision(){
         if(getX() < 0) {setX(0); setXVelocity(0);}
@@ -107,7 +93,7 @@ public class Bucket {
         if(getY() < 0) {setY(0); setYVelocity(0);}
         if(getY() > h - 64) {setY(h-64); setYVelocity(0);}
     }
-    private void decelXToStop(){
+    public void decelXToStop(){
         if (getXVelocity() > 0){
             if (getXVelocity() - decel*Gdx.graphics.getDeltaTime() < 0){
                 setXVelocity(0);
@@ -123,7 +109,7 @@ public class Bucket {
             }
         }
     }
-    private void decelYToStop(){
+    public void decelYToStop(){
         if (getYVelocity() > 0){
             if (getYVelocity() - decel*Gdx.graphics.getDeltaTime() < 0){
                 setYVelocity(0);
